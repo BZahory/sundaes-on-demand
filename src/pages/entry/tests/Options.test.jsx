@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import Options from "./Options";
+import Options from "../Options";
 
 test('should display image for each scoop option from server', async () => {
     render(<Options optionType="scoops"/>);
@@ -26,3 +26,8 @@ test('should display image for each topping option from server', async () => {
     expect(altText).toEqual(['Cherries', 'M&Ms', 'Hot fudge'].map((e) => e + " topping"));
     
 })
+
+test('should display error if exception is throw by axios', () => {
+    
+})
+
