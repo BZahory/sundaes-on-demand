@@ -1,16 +1,16 @@
 import React from 'react';
 import {render, fireEvent, waitFor, screen} from '@testing-library/react'
 import '@testing-library/jest-dom'
-import OrderSummary from '../OrderSummary';
+import SummaryForm from '../SummaryForm';
 
 test('should not have checkbox checked initially', () => {
-    render(<OrderSummary/>);
+    render(<SummaryForm/>);
     const checkbox = screen.getByRole('checkbox');
     expect(checkbox).not.toBeChecked;    
 })
 
 test('should enable button on check, and disable on second check', () => {
-    render(<OrderSummary/>);
+    render(<SummaryForm/>);
 
     const checkbox = screen.getByRole('checkbox');
 
